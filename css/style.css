@@ -1,0 +1,122 @@
+:root {
+  color-scheme: light dark;
+  --bg-h2: #c4c4c4;
+  --bg-header: #e5e5e5;
+  --color-azul: #005677;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+img, iframe, audio {
+  width: 100%;
+}
+/* Header */
+header{
+  max-width: 1440px;
+  width: 100%;
+  padding-top: 25px;
+  background-color: var(--bg-header);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  div {
+    display: flex;
+    align-items: center;
+    .batarang {
+      height: 50px;
+      width: 50px;
+      animation: batarang ease-in 1.2s infinite alternate-reverse; /* Hace que el batarang vaya y venga  en un movimiento ondulatorio */
+    }
+    img {
+      width: 180px;
+      margin-bottom: 25px;
+    }
+  }
+  h1 {
+    background-color: var(--bg-h2);
+    width: 100%;
+    text-align: center;
+    color: var(--color-azul);
+    letter-spacing: 8px;
+    text-transform: uppercase;
+  }
+}
+
+main {
+  color: black;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding-top: 133px;
+  background-color: white;
+  ul {
+    padding-left: 38px;
+    padding-top: 24px;
+    li {
+      padding-top: 10px;
+      span {
+        font-weight: bold;
+        font-style: italic;
+      }
+    }
+  }
+  section {
+    padding-bottom: 36px;
+    h2 {
+      background-color: var(--bg-h2);
+      color: var(--color-azul);
+      padding-left: 12px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+    }
+    p {
+      margin-left: 36px;
+    }
+    dl {
+      padding-left: 24px;
+      padding-top: 24px;
+      dt {
+        padding-top: 10px;
+        span {
+          font-weight: bold;
+        }
+      }
+      dd {
+        margin-left: 77px;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: var(--color-azul);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1440px;
+  h2 {
+    padding: 15px 20px;
+  }
+  a i {
+    color: white;
+    font-size: 2rem;
+    padding-right: 20px;
+  }
+}
+/* Esta es la animación del Batarang */
+@keyframes batarang {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(-45vw) rotate(360deg);
+  }
+}
